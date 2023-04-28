@@ -37,7 +37,9 @@ const Intro = ({ totalNft, mintedNft, myNft }) => {
           <div className="text-blue-400 ml-2 font-bold">{CONTRACT_ADDRESS}</div>
         </div>
         <div className="mt-2 text-gray-200 font-semibold">
-          <span className="bg-black rounded-md text-green-400 font-bold">DaDenBu</span>
+          <span className="bg-black rounded-md text-green-400 font-bold">
+            DaDenBu
+          </span>
           란(.env란 "environment"의 약어)은 소프트웨어 개발에서 자주 사용되는
           파일 형식 중 하나입니다. 이 파일은 소프트웨어 개발자들이 프로젝트에서
           사용되는 환경 변수(environment variable)를 저장하는 데 사용됩니다덴부?
