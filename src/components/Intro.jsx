@@ -10,15 +10,23 @@ const imgSrc = `${process.env.REACT_APP_IMAGE_URL}/${ranNum}.png`;
 const Intro = ({ totalNft, mintedNft, myNft }) => {
   return (
     // bg-gradient-to-b 아래로 b==bottom
-    <div className="bg-gradient-to-tr from-violet-500 to-rose-500 pt-10">
+    <>
+    <div
+      className="bg-center bg-cover absolute"
+      style={{
+        backgroundImage: `url('/img/env2.png')`,
+        height: "300px",
+        width: "100%",
+      }}
+    ></div>
       {/* 그라데이션만 헤더크기 넘치게 해서 끝까지 보여지게 표시 */}
       <div className="max-w-screen-xl mx-auto px-4 relative">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-pink-700 font-bold text-9xl truncate opacity-20 pointer-events-none">
+        {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-pink-700 font-bold text-9xl truncate opacity-20 pointer-events-none">
           DaDenBu!
-        </div>
+        </div> */}
         <div className="relative">
           <img
-            className="absolute w-40 h-40 rounded-xl"
+            className="absolute w-40 h-40 rounded-xl mt-3"
             src={imgSrc}
             alt="NFT"
           />
@@ -26,7 +34,7 @@ const Intro = ({ totalNft, mintedNft, myNft }) => {
             Loading...
           </div>
         </div>
-        <div className="mt-4 text-2xl font-bold flex items-center">
+        <div className="mt-4 text-2xl font-bold flex items-center text-yellow-300">
           DaDenBu
           <div className="flex justify-center items-center ml-1 text-orange-300">
             <HiStar size={20} />
@@ -36,7 +44,7 @@ const Intro = ({ totalNft, mintedNft, myNft }) => {
           by
           <div className="text-blue-400 ml-2 font-bold">{CONTRACT_ADDRESS}</div>
         </div>
-        <div className="mt-2 text-gray-200 font-semibold">
+        <div className="mt-2 text-orange-500 font-semibold">
           <span className="bg-black rounded-md text-green-400 font-bold">
             DaDenBu
           </span>
@@ -59,7 +67,9 @@ const Intro = ({ totalNft, mintedNft, myNft }) => {
           </div>
         </div>
       </div>
-    </div>
+      
+    </>
+
   );
 };
 

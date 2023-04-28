@@ -45,7 +45,7 @@ const Nfts = ({ page, mintedNft }) => {
         <button
           key={i}
           className={`ml-4 text-2xl font-bold hover:text-yellow-300 ${
-            i + 1 === selectedPage ? "text-white" : "text-gray-400"
+            i + 1 === selectedPage ? "text-yellow-300" : "text-gray-400"
           }`}
           onClick={onClickPage(i + 1)}
         >

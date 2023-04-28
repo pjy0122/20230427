@@ -9,7 +9,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className="bg-gray-950 min-h-screen text-white">
+      <div className="bg-black min-h-screen text-white">
         <Header account={account} setAccount={setAccount} />
         <Routes>
           <Route path="/" element={<Main account={account} />} />
