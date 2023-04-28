@@ -55,7 +55,7 @@ const Header = ({ account, setAccount }) => {
             {coinPrice.map((v, i) => {
               return (
                 <li key={i} className="ml-2">
-                  {v.symbol}: {(v.price / 1000).toLocaleString()}KRW
+                  {v.symbol}: {(v.price / 1000).toLocaleString()}K\
                 </li>
               );
             })}

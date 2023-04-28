@@ -32,25 +32,29 @@ const Detail = () => {
         <>
           <div className="max-w-[512px]">
             <img className="rounded-t-2xl" src={metadata.image} alt="NFT" />
-            <ul className="grid grid-cols-4 gap-8 py-8 bg-gray-800 rounded-b-2xl text-center">
+            <ul className="pl-16 grid grid-cols-4 gap-8 py-8 bg-gray-800 rounded-b-2xl text-center">
               {metadata.attributes.map((v, i) => {
                 return (
-                  <li key={i} className="ml-20">
+                  <li key={i} className="ml-10">
                     <div>{v.trait_type}</div>
-                    <div className="mt-1 border-t-2 font-bold">{v.value}</div>
+                    <div className="mt-1 border-t-2 border-yellow-300 rounded-md font-bold">
+                      {v.value}
+                    </div>
                   </li>
                 );
               })}
             </ul>
           </div>
           <div className="m-8">
-            <div className="text-4xl flex items-center">
+            <div className="text-4xl flex items-center font-bold">
               <div>{metadata.name}</div>
               <div className="bg-main w-8 h-8 rounded-full flex justify-center items-center ml-2 text-blue-300">
                 <BsFillBookmarkHeartFill size={28} />
               </div>
             </div>
-            <div className="mt-8 text-2xl">{metadata.description}</div>
+            <div className="mt-8 text-2xl font-semibold">
+              {metadata.description}
+            </div>
           </div>
         </>
       ) : (

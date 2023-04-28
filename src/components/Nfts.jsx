@@ -44,7 +44,7 @@ const Nfts = ({ page, mintedNft }) => {
       pageArray.push(
         <button
           key={i}
-          className={`ml-4 text-2xl font-bold hover:text-white ${
+          className={`ml-4 text-2xl font-bold hover:text-yellow-300 ${
             i + 1 === selectedPage ? "text-white" : "text-gray-400"
           }`}
           onClick={onClickPage(i + 1)}
